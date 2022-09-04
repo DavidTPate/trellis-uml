@@ -23,7 +23,7 @@
         "type": "string"
       },
       "technology": {
-        "type": "string"
+        "$ref": "Technology.schema.json"
       }
     },
     "required": ["source", "target"]

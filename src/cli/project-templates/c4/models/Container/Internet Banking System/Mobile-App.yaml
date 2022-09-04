@@ -1,16 +1,18 @@
+kind: Container
 name: Mobile Banking App
+type: mobile-application
 description: Provides a limited subset of the internet banking functionality to the customers via their mobile device
 technology: Xamarin
 components:
   app:
     name: Banking App
     relationships:
-      - type: uses 
+      - type: uses
         target:
           $ref: "../../Component/Internet Banking System/Sign-In-Controller.yaml"
-      - type: uses 
+      - type: uses
         target:
           $ref: "../../Component/Internet Banking System/Reset-Password-Controller.yaml"
-      - type: uses 
+      - type: uses
         target:
           $ref: "../../Component/Internet Banking System/Accounts-Summary-Controller.yaml"

@@ -1,0 +1,6 @@
+{
+  "$id": "WebApplicationTechnology.schema.schema.schema.json",
+  "title": "WebApplicationTechnology.schema.schema",
+  "type": "string",
+  "enum": ["Xamarin", "Swift", "Dart", "Objective-C", "Java", "Scala", "React-Native"]
+}

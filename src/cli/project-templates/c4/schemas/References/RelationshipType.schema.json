@@ -1,0 +1,6 @@
+{
+  "$id": "RelationshipType.schema.json",
+  "title": "RelationshipType",
+  "type": "string",
+  "enum": ["generalization","realization", "dependency","association", "memberOf", "manages"]
+}

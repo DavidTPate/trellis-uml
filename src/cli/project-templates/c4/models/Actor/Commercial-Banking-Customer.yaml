@@ -1,0 +1,24 @@
+kind: Actor
+name: Commercial Banking Customer
+type: Customer
+description: A customer of the bank who manages commercial accounts for an organization.
+relationships:
+  - target:
+      $ref: "./Commercial-Organization.yaml"
+    description: Customer is employed by the organization
+    type: memberOf
+  - target:
+      $ref: "../Container/Internet Banking System/DB2.yaml"
+    description: Used to view public information about the bank (eg. hours, locations, ATMs), view and manage accounts, and set communication preferences via their mobile device
+    type: association
+    technology: https
+  - target:
+      $ref: "../Container/Internet Banking System/AS-400.yaml"
+    description: Used to view public information about the bank (eg. hours, locations, ATMs) via their desktop or mobile browser
+    type: association
+    technology: https
+  - target:
+      $ref: "../Container/Communications System/CICS.yaml"
+    description: Used by the user to set their communication preferences via their desktop or mobile browser
+    type: association
+    technology: https

@@ -1,3 +1,4 @@
+kind: Component
 name: Internet Banking System Common
 description: Provides common functionality like exceptions and shared entities
 technology: Unknown

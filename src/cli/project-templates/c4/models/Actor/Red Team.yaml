@@ -1,0 +1,25 @@
+kind: Actor
+name: Red Team
+type: Group
+description: The Red Team scrum team that who is a member of the IT Organization of the bank
+relationships:
+  - target:
+      $ref: "./Bank-Company.yaml"
+    description: Scrum team belonging to the Bank Company organization
+    type: memberOf
+  - target:
+      $ref: "../Container/Internet Banking System/Control-D.yaml"
+    description: Manages the Mobile Application to ensure it is available and working for customer use
+    type: manages
+  - target:
+      $ref: "../Container/Internet Banking System/DB2.yaml"
+    description: Manages the Mobile Application to ensure it is available and working for customer use
+    type: manages
+  - target:
+      $ref: "../Container/Communications System/Control-D.yaml"
+    description: Manges the SPA to ensure it is available and working for customer use
+    type: manages
+  - target:
+      $ref: "../Container/Communications System/CICS.yaml"
+    description: Manges the SPA to ensure it is available and working for customer use
+    type: manages

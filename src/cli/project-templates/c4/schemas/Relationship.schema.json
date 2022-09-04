@@ -3,6 +3,7 @@
   "title": "Software System",
   "type": "object",
   "properties": {
+
     "source": {
       "type":"string"
     },
@@ -13,7 +14,7 @@
       "type": "string"
     },
     "technology": {
-      "type": "string"
+      "$ref": "Technology.schema.json"
     }
   },
   "required": ["name"]

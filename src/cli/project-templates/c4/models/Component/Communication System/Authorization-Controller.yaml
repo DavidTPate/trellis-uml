@@ -1,0 +1,9 @@
+kind: Component
+name: Authorization Controller
+description: Ensures that users are authorized to access the request resource for the requested action, rejects if not allowed
+type: Controller
+technology: Spring MVC
+relationships:
+  - type: uses
+    target:
+      $ref: './Security-Component.yaml'

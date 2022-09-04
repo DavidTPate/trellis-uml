@@ -1,4 +1,7 @@
+kind: Container
 name: Web Application
+type: web-application
+technology: Java
 description: The main static website for the bank, allows users to navigate to the Internet Banking System.
 components:
   webApplication:
@@ -6,4 +9,4 @@ components:
     relationships:
       - type: provides
         target:
-          $ref: "./Single-Page-Application.yaml"
+          $ref: "./CICS.yaml"

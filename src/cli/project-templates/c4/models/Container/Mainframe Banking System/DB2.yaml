@@ -1,0 +1,7 @@
+kind: Container
+name: Database
+type: relational-database
+description: Used to persist all account, transaction, and other operational data for the bank
+technology: DB2
+components:
+  - $ref: "../Entity/Personal-Account-Entity.yaml"

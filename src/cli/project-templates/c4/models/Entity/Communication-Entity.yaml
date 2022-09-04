@@ -1,0 +1,5 @@
+kind: Entity
+name: Communication Entity
+description: Entity representing an event where a piece of communication was sent to a user via email or sms
+datasource:
+  $ref: "../Container/Communications System/Database.yaml"

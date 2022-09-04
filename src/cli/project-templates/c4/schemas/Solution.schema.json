@@ -4,6 +4,9 @@
   "description": "A C4 model for System Context",
   "type": "object",
   "properties": {
+    "kind": {
+      "const": "Solution"
+    },
     "name": {
       "type": "string"
     },
@@ -14,7 +17,7 @@
       "type": "object",
       "patternProperties": {
         ".*": {
-          "$ref": "Person.schema.json"
+          "$ref": "Actor.schema.json"
         }
       }
     },
@@ -33,5 +36,5 @@
       }
     }
   },
-  "required": ["name", "people", "systems", "relationship"]
+  "required": ["kind", "name", "people", "systems", "relationship"]
 }

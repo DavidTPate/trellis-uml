@@ -1,0 +1,6 @@
+{
+  "$id": "SystemRelationshipType.schema.schema.json",
+  "title": "SystemRelationshipType.schema",
+  "type": "string",
+  "enum": ["memberOf", "manages", "managedBy", "ownedBy"]
+}

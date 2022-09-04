@@ -1,0 +1,6 @@
+{
+  "$id": "SinglePageApplicationTechnology.schema.schema.schema.json",
+  "title": "SinglePageApplicationTechnology.schema.schema",
+  "type": "string",
+  "enum": ["React", "jQuery", "Vue.js", "Angular"]
+}

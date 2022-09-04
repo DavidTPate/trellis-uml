@@ -1,0 +1,20 @@
+kind: Container
+name: Internet Banking API
+type: api-service
+technology: SpringBoot
+description: Provides Internet banking functionality via a JSON/HTTPS API.
+connections:
+  - target:
+      $ref: "./Database.yaml"
+    description: Used to persist communication history and preferences for users
+    protocol: mysql
+components:
+  - $ref: "../../Component/Communication System/Authentication-Controller.yaml"
+  - $ref: "../../Component/Communication System/Authorization-Controller.yaml"
+  - $ref: "../../Component/Communication System/Communication History Controller.yaml"
+  - $ref: "../../Component/Communication System/Communication Preferences Controller.yaml"
+  - $ref: "../../Component/Communication System/Email-Service.yaml"
+  - $ref: "../../Component/Communication System/Internet-Banking-System-Common.yaml"
+  - $ref: "../../Component/Communication System/SMS-Service.yaml"
+  - $ref: "../../Entity/Communication-Entity.yaml"
+  - $ref: "../../Entity/Communication-Preferences-Entity.yaml"

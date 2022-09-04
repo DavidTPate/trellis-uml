@@ -1,0 +1,5 @@
+kind: Entity
+name: Personal Account Entity
+description: Entity representing a personal account that a customer has opened
+datasource:
+  $ref: "../Container/Internet Banking System/Database.yaml"

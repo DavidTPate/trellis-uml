@@ -1,0 +1,27 @@
+{
+  "$id": "Actor.schema.json",
+  "title": "Actor",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "Actor"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Customer","Employee", "Person", "Organization", "Group"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "References/ActorRelationship.schema.json"
+      }
+    }
+  },
+  "required": ["kind", "name","type"]
+}

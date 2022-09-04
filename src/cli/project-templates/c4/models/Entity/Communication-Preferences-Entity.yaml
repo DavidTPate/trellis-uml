@@ -1,0 +1,5 @@
+kind: Entity
+name: Communication Preferences Entity
+description: Entity representing the preferences that a user set for the communications
+datasource:
+  $ref: "../Container/Communications System/Database.yaml"

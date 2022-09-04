@@ -1,0 +1,41 @@
+{
+  "$id": "ConnectionRelationship.schema.json",
+  "title": "Connection Relationship",
+  "description": "A relationship where a connection is established through a known protocol",
+  "type": "object",
+  "properties": {
+    "target": {
+      "type": "object",
+      "oneOf": [
+        {
+          "source": {
+            "$ref": "System.schema.json"
+          }
+        },
+        {
+          "source": {
+            "$ref": "Actor.schema.json"
+          }
+        },
+        {
+          "source": {
+            "$ref": "Container.schema.json"
+          }
+        }
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string",
+      "enum": ["https", "http", "smtp", "sms", "mysql"]
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535
+    }
+  },
+  "required": ["target", "type", "protocol"]
+}

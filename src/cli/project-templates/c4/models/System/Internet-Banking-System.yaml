@@ -1,0 +1,27 @@
+kind: System
+name: Internet Banking System
+type: SoftwareSystem
+description: Allows customers to view information about their bank accounts and make payments.
+# All the components that are deployed as part of the system, NOT its dependencies.
+# Components are namespaced, so the key values "service" and "db" below become part of the id for that component.
+containers:
+  webApplication:
+    $ref: "../Container/Internet Banking System/Web-Application.yaml"
+  singlePageApplication:
+    $ref: "../Container/Internet Banking System/Single-Page-Application.yaml"
+  mobileApplication:
+    $ref: "../Container/Internet Banking System/Mobile-App.yaml"
+    $ref: "../Container/Internet Banking System/Mobile-App.yaml"
+  database:
+    $ref: "../Container/Internet Banking System/Database.yaml"
+  apiApplication:
+    $ref: "../Container/Internet Banking System/API-Application.yaml"
+connections:
+  - target:
+      $ref: "./Mainframe-Banking-System.yaml"
+    description: Retrieves account information and executes commands on behalf of customers using
+    protocol: https
+  - target:
+      $ref: "./Communications-System.yaml"
+    description: Requests communication to be sent to a user via their preferred method
+    protocol: https

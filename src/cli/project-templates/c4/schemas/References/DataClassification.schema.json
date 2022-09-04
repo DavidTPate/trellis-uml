@@ -1,0 +1,6 @@
+{
+  "$id": "DataClassification.schema.json",
+  "title": "DataClassification",
+  "type": "string",
+  "enum": ["unrestricted", "sensitive", "restricted"]
+}

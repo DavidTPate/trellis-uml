@@ -1,3 +1,4 @@
+kind: Component
 name: Mainframe Facade
 description: Abstracts the connection and integration details \nto the legacy mainframe system.
 technology: Spring Bean
@@ -9,14 +10,14 @@ elements:
   BankingSystemConnection:
     type: class
     relationships:
-      - target: 
+      - target:
           $ref: '#/elements/AbstractRequest'
         type: sends
       - target:
           $ref: '#/elements/AbstractResponse'
         type: receives
       - target:
-          $ref: "../../System/Mainframe.yaml"
+          $ref: "../../System/Mainframe-Banking-System.yaml"
         type: uses
   GetBalanceRequest:
     type: class

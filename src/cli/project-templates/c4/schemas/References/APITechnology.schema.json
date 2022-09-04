@@ -1,0 +1,6 @@
+{
+  "$id": "APITechnology.schema.schema.json",
+  "title": "APITechnology.schema",
+  "type": "string",
+  "enum": ["node.js", "express.js", "python", "java", "SpringBoot", "springcloud", ".net"]
+}

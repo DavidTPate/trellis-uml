@@ -1,6 +1,8 @@
+kind: Container
 name: Internet Banking API
+type: api-service
 description: Provides Internet banking functionality via a JSON/HTTPS API.
-technology: Java and Spring MVC
+technology: SpringBoot
 components:
   MainframeFacade:
     $ref: "../../Component/Internet Banking System/Mainframe-Facade.yaml"

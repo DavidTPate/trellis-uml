@@ -1,0 +1,17 @@
+kind: Container
+name: Single-Page Application
+type: single-page-application
+description: Provides the ability for a user to view their communication history and manage communication preferences
+technology: Angular
+connections:
+  - target:
+      $ref: "./API-Application.yaml"
+    description: Used to retrieve communication history as well as persist communication preferences for a user
+    protocol: https
+components:
+  - $ref: "../../Component/Communication System/Authentication-Controller.yaml"
+  - $ref: "../../Component/Communication System/Communication History Controller.yaml"
+  - $ref: "../../Component/Communication System/Communication Preferences Controller.yaml"
+  - $ref: "../../Component/Communication System/Internet-Banking-System-Common.yaml"
+  - $ref: "../../Entity/Communication-Entity.yaml"
+  - $ref: "../../Entity/Communication-Preferences-Entity.yaml"

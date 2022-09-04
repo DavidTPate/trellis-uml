@@ -1,0 +1,30 @@
+{
+  "$id": "SystemRelationship.schema.json",
+  "title": "System Relationship",
+  "description": "A relationship between a Person and a Software System or between Software Systems.",
+  "type": "object",
+  "properties": {
+    "target": {
+      "type": "object",
+      "oneOf": [
+        {
+          "source": {
+            "$ref": "System.schema.json"
+          }
+        },
+        {
+          "source": {
+            "$ref": "Actor.schema.json"
+          }
+        }
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "SystemRelationshipType.schema.json"
+    }
+  },
+  "required": ["target","type"]
+}

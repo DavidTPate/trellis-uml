@@ -1,0 +1,6 @@
+{
+  "$id": "Visibility.schema.json",
+  "title": "Visibility",
+  "type": "string",
+  "enum": ["public", "internal", "private", "offline"]
+}

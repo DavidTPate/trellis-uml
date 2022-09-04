@@ -1,0 +1,6 @@
+{
+  "$id": "RelationalDatabaseTechnology.schema.json",
+  "title": "RelationalDatabaseTechnology",
+  "type": "string",
+  "enum": ["Oracle", "DB2", "MSSQL", "MySQL", "Postres", "SQLLite", "Generic"]
+}

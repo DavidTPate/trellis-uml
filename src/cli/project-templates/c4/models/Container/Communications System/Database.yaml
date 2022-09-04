@@ -1,0 +1,8 @@
+kind: Container
+name: Communications Database
+type: relational-database
+description: Stores user registration information, hashed auth credentials, access logs, etc.
+technology: Oracle
+components:
+  - $ref: "../../Entity/Communication-Entity.yaml"
+  - $ref: "../../Entity/Communication-Preferences-Entity.yaml"

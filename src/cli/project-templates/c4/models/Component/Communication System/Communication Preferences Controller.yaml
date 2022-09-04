@@ -1,0 +1,10 @@
+name: Communication Preferences Controller
+description: Provides users with the ability to manage their communication preferences
+technology: Controller
+elements:
+  BankingService:
+    type: class
+    relationships:
+      - type: uses
+        target:
+          $ref: './Mainframe-Facade.yaml#/elements/MainframeBankingSystemFacade'

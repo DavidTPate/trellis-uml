@@ -1,6 +1,8 @@
+kind: Container
+type: relational-database
 name: Database
 description: Stores user registration information, hashed auth credentials, access logs, etc.
-technology: Oracle Database
+technology: Oracle
 components:
   UserSchema:
     name: User Schema

@@ -1,0 +1,12 @@
+kind: Component
+name: Communication Preferences Controller
+description: Provides users with the ability to view their communication history
+type: Controller
+technology: Spring MVC
+elements:
+  BankingService:
+    type: class
+    relationships:
+      - type: uses
+        target:
+          $ref: './Mainframe-Facade.yaml#/elements/MainframeBankingSystemFacade'

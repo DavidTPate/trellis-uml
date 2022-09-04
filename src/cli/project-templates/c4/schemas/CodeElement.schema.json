@@ -13,6 +13,9 @@
   },
   "else": {
     "properties": {
+      "kind": {
+        "const": "CodeElement"
+      },
       "name": {
         "type":"string"
       },
@@ -30,6 +33,6 @@
         }
       }
     },
-    "required": ["type"]
+    "required": ["kind", "type"]
   }
 }

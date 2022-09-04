@@ -1,0 +1,8 @@
+kind: Component
+name: SMS Service
+description: Can be invoked to send the requested message via SMS to one or more addresses registered for the user
+type: Service
+relationships:
+  - type: uses
+    target:
+      $ref: "../../System/Communications-System.yaml"

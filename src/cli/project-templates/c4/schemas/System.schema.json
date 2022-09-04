@@ -3,15 +3,24 @@
   "title": "Software System",
   "type": "object",
   "properties": {
+    "kind": {
+      "const": "System"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["SoftwareSystem"]
+    },
     "name": {
       "type":"string"
     },
     "description": {
       "type": "string"
     },
-    "location": {
-      "type": "string",
-      "enum": ["internal", "external"]
+    "visibility": {
+      "$ref": "References/Visibility.schema.json"
+    },
+    "dataClassification": {
+      "$ref": "References/DataClassification.schema.json"
     },
     "containers": {
       "type": "object",
@@ -25,16 +34,22 @@
       "type": "object",
       "patternProperties": {
         ".*": {
-          "$ref": "Person.schema.json"
+          "$ref": "Actor.schema.json"
         }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "$ref": "References/ConnectionRelationship.json"
       }
     },
     "relationships": {
       "type": "array",
       "items": {
-        "$ref": "ContainerRelationship.schema.json"
+        "$ref": "References/SystemRelationship.schema.json"
       }
     }
   },
-  "required": ["name"]
+  "required": ["kind", "name", "type"]
 }

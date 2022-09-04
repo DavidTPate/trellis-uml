@@ -1,0 +1,9 @@
+kind: Component
+name: Authentication Controller
+description: Ensures that users are authenticated, if not redirects them to the sign-in with a callback URL of their original destination
+type: Controller
+technology: Spring MVC
+relationships:
+  - type: uses
+    target:
+      $ref: "../Internet Banking System/Internet-Banking-System-Common.yaml"

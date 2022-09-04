@@ -1,0 +1,26 @@
+kind: System
+name: Communications System
+type: SoftwareSystem
+description: Allows internal banking systems to send communcations to customers using their preferred methods.
+# All the components that are deployed as part of the system, NOT its dependencies.
+# Components are namespaced, so the key values "service" and "db" below become part of the id for that component.
+containers:
+  singlePageApplication:
+    $ref: "../Container/Communications System/Single-Page-Application.yaml"
+  database:
+    $ref: "../Container/Communications System/Database.yaml"
+  apiApplication:
+    $ref: "../Container/Communications System/API-Application.yaml"
+connections:
+  - target:
+      $ref: "../Actor/Personal-Banking-Customer.yaml"
+    description: Sends communication to a personal user based on their preference
+    protocol: sms
+  - target:
+      $ref: "../Actor/Commercial-Banking-Customer.yaml"
+    description: Sends communication to a commercial user based on their preference
+    protocol: sms
+relationships:
+  - target:
+      $ref: "../Actor/Bank-Company.yaml"
+    type: ownedBy

@@ -1,0 +1,6 @@
+{
+  "$id": "WebApplicationTechnology.schema.schema.schema.json",
+  "title": "WebApplicationTechnology.schema.schema",
+  "type": "string",
+  "enum": ["node.js", "express.js", "python", "Java", "SpringBoot", "SpringCloud", ".net"]
+}

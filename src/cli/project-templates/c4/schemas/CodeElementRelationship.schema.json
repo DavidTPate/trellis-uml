@@ -11,7 +11,7 @@
       "$ref": "CodeElement.schema.json"
     },
     "technology":{
-      "type": "string"
+      "$ref": "Technology.schema.json"
     }
   },
   "required": ["target", "type"]

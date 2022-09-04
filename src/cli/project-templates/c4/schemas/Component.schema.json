@@ -13,14 +13,22 @@
   },
   "else": {
     "properties": {
+      "kind": {
+        "const": "Component"
+      },
       "name": {
         "type":"string"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["Controller", "Service", "Factory", "Facade", "Library"]
       },
       "description": {
         "type": "string"
       },
       "technology": {
-        "type": "string"
+        "type": "string",
+        "enum": ["Java", "Spring", "Spring MVC"]
       },
       "elements": {
         "type": "object",
@@ -37,6 +45,6 @@
         }
       }
     },
-    "required": ["name"]
+    "required": ["kind", "name"]
   }
 }

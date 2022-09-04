@@ -1,0 +1,5 @@
+kind: Container
+name: Database
+type: relational-database
+description: Used to persist files in a version controlled way with authentication and authorization on the mainframe
+technology: Generic

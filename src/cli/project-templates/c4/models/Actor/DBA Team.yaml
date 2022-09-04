@@ -1,0 +1,21 @@
+kind: Actor
+name: DBA Team
+type: Group
+description: The DBA Team that supports the IT organization at the bank
+relationships:
+  - target:
+      $ref: "./Bank-Company.yaml"
+    description: Team belonging to the Bank Company organization
+    type: memberOf
+  - target:
+      $ref: "../Container/Internet Banking System/Database.yaml"
+    description: Manages the database to ensure integrity, availability, and monitoring/backup systems are operating as expected
+    type: manages
+  - target:
+      $ref: "../Container/Communications System/Database.yaml"
+    description: Manages the database to ensure integrity, availability, and monitoring/backup systems are operating as expected
+    type: manages
+  - target:
+      $ref: "../Container/Mainframe Banking System/DB2.yaml"
+    description: Manages the database to ensure integrity, availability, and monitoring/backup systems are operating as expected
+    type: manages

@@ -1,0 +1,4 @@
+kind: Actor
+name: Commercial Company
+type: Organization
+description: A company that is a customer of the bank

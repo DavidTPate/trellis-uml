@@ -4,19 +4,7 @@
   "type": "object",
   "patternProperties": {
     ".*": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type":"string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string",
-          "enum": ["internal", "external"]
-        }
-      }
+      "$ref": "Actor.schema.json"
     }
   }
 }

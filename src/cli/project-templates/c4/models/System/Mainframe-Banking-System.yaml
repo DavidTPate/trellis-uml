@@ -1,0 +1,18 @@
+kind: System
+type: SoftwareSystem
+id: mainframe_banking_system
+name: Mainframe Banking System
+description: Allows customers to view information about their bank accounts and make payments.
+# All the components that are deployed as part of the system, NOT its dependencies.
+# Components are namespaced, so the key values "service" and "db" below become part of the id for that component.
+containers:
+  webApplication:
+    $ref: "../Container/Mainframe Banking System/AS-400.yaml"
+  singlePageApplication:
+    $ref: "../Container/Mainframe Banking System/CICS.yaml"
+  mobileApplication:
+    $ref: "../Container/Mainframe Banking System/DB2.yaml"
+  database:
+    $ref: "../Container/Mainframe Banking System/RACF.yaml"
+  apiApplication:
+    $ref: "../Container/Mainframe Banking System/Control-D.yaml"

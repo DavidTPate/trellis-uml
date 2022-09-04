@@ -1,0 +1,4 @@
+kind: Actor
+name: Bankosaurus Bank
+type: Organization
+description: The entity representing our bank

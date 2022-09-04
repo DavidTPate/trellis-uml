@@ -13,21 +13,34 @@
   },
   "else": {
   "properties": {
+    "kind": {
+      "const": "Container"
+    },
     "name": {
       "type":"string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["relational-database", "api-service", "web-application", "single-page-application", "mobile-application"]
     },
     "description": {
       "type": "string"
     },
-    "technology": {
-      "type": "string"
+    "visibility": {
+      "$ref": "References/Visibility.schema.json"
+    },
+    "dataClassification": {
+      "$ref": "References/DataClassification.schema.json"
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "$ref": "References/ConnectionRelationship.json"
+      }
     },
     "components": {
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "$ref": "Component.schema.json"
-        }
+      ".*": {
+        "oneOf": [{"$ref": "Component.schema.json"}, {"$ref": "Entity.schema.json"}]
       }
     },
     "relationships": {
@@ -37,6 +50,58 @@
       }
     }
   },
-  "required": ["name"]
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "relational-database" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "technology": { "$ref": "References/RelationalDatabaseTechnology.schema.json"} },
+        "required": ["type"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "api-service" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "technology": { "$ref": "References/APITechnology.schema.json"} },
+        "required": ["type"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "web-application" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "technology": { "$ref": "References/WebApplicationTechnology.schema.json"} },
+        "required": ["type"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "single-page-application" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "technology": { "$ref": "References/SinglePageApplicationTechnology.schema.json"} },
+        "required": ["type"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "mobile-application" } },
+        "required": ["type"]
+      },
+      "then": {
+        "properties": { "technology": { "$ref": "References/MobileApplicationTechnology.schema.json"} },
+        "required": ["type"]
+      }
+    }
+  ],
+  "required": ["kind", "name", "type"]
 }
 }

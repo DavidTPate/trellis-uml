@@ -1,0 +1,29 @@
+kind: Actor
+name: Blue Team
+type: Group
+description: The Blue Team scrum team that who is a member of the IT Organization of the bank
+relationships:
+  - target:
+      $ref: "./Bank-Company.yaml"
+    description: Scrum team belonging to the Bank Company organization
+    type: memberOf
+  - target:
+      $ref: "../Container/Internet Banking System/Web-Application.yaml"
+    description: Manages the Mobile Application to ensure it is available and working for customer use
+    type: manages
+  - target:
+      $ref: "../Container/Mainframe Banking System/AS-400.yaml"
+    description: Manages the AS-400 to ensure it is available, up-to-date, and monitoring/backup systems are operating as expected
+    type: manages
+  - target:
+      $ref: "../Container/Mainframe Banking System/CICS.yaml"
+    description: Manages CICS to ensure it is available and operating correctly
+    type: manages
+  - target:
+      $ref: "../Container/Mainframe Banking System/Control-D.yaml"
+    description: Manages Control-D to ensure it is available and jobs are running to completion without ABENDing
+    type: manages
+  - target:
+      $ref: "../Container/Mainframe Banking System/RACF.yaml"
+    description: Manages RACF to ensure it is available, has capacity, and monitoring/backup systems are operating as expected
+    type: manages
